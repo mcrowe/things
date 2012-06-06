@@ -39,6 +39,46 @@
         </div>
       </div>
     </div>
+    
+    <div class="navbar navbar-fixed-bottom">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+
+          <div class="container-fluid nav-collapse">
+            
+            <ul class="nav pull-right">
+              <li class="dropdown pull-right">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="icon-plus"></i>
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to "Link1", "/path1"  %></li>
+                  <li><%= link_to "Link2", "/path2"  %></li>
+                  <li><%= link_to "Link3", "/path3"  %></li>
+                </ul>
+             </li>
+             
+             <li class="divider-vertical"></li>
+             
+              <li class="dropdown pull-right">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="icon-cog"></i>
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to "Link1", "/path1"  %></li>
+                  <li><%= link_to "Link2", "/path2"  %></li>
+                  <li><%= link_to "Link3", "/path3"  %></li>
+                </ul>
+             </li>
+             
+            </ul>
+            
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
 
     <div class="container-fluid">
       <div class="row-fluid">
@@ -138,17 +178,8 @@
                   Trash
                 <% end %>
               </li>
-              
-              <li class="divider"></li>
-              <li>
-                <%= link_to new_task_path, :class => 'btn btn-primary btn-small' do %>
-                  <i class="icon-plus"></i>
-                  List
-                <% end %>
-              </li>
-            </ul>
-            
 
+            </ul>
             
           </div><!--/.well -->
         </div><!--/span-->
@@ -156,10 +187,6 @@
           <%= yield %>
         </div>
       </div><!--/row-->
-
-      <footer>
-        <p>&copy; Company 2012</p>
-      </footer>
 
     </div> <!-- /container -->
 
