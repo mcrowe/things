@@ -1,0 +1,33 @@
+<div class="page-header">
+  <h1>Someday</h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Points</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.title %></td>
+        <td><span class="badge badge-info"><%= task.points %></span></td>
+        <td>
+          <%= link_to edit_task_path(task), :class => 'btn btn-mini' do %>
+            <i class="icon-pencil"></i>
+          <% end %>
+          <%= link_to task_path(task), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' do %>
+            <i class="icon-trash"></i>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to new_task_path, :class => 'btn btn-default' do %>
+  <i class="icon-plus"></i>
+  Task
+<% end %>
