@@ -12,3 +12,8 @@ window.Todorails =
 
 $(document).ready ->
   Todorails.init()
+
+  $(document).keyup (event) ->
+    if event.keyCode == 78
+      Todorails.tasks.create()
+

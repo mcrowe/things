@@ -5,8 +5,8 @@ class Todorails.Models.Task extends Backbone.Model
     description: ''
     done: false
 
-  toggle: ->
-    @set(done: !@get('done'))
+  toggleDone: ->
+    @save(done: !@get('done'))
 
   clear: ->
     @destroy()

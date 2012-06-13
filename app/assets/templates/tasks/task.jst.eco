@@ -1,12 +1,18 @@
 <div class="accordion-heading">
-  <a class="accordion-toggle" data-toggle="collapse" data-parent="#tasks" data-target="#collapse-<%= @task.cid %>">
-    <input type="checkbox" style="margin-right: 10px; float: left">
-    <%= @task.get('title') %>
+  <span class="accordion-toggle">
+    <input class="done" type="checkbox" style="margin-right: 10px; float: left" <%= 'checked="checked"' if @task.get('done') %>>
+
+    <% if @isEditing: %>
+      <input class="input-xlarge title-field" id="disabledInput" type="text" value="<%= @task.get('title') %>">
+    <% else: %>
+      <%= @task.get('title') %>
+    <% end %>
+
     <i class="icon-pencil" style="margin-left: 10px"></i>
-  </a>
+  </span>
 </div>
 
-<div id="collapse-<%= @task.cid %>" class="accordion-body collapse" style="height: 0px; ">
+<div class="accordion-body collapse" style="height: 0px;">
   <div class="accordion-inner">
     <%= @task.get('description') %>
   </div>

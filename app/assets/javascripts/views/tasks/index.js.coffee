@@ -3,8 +3,8 @@ class Todorails.Views.TasksIndex extends Backbone.View
   template: JST['tasks/index']
 
   initialize: ->
-    @collection.bind('change', @render)
     @collection.bind('reset', @render)
+    @collection.bind('add', @appendTask)
 
   render: =>
     $(@el).html(@template())
