@@ -1,0 +1,13 @@
+<div class="accordion-heading">
+  <a class="accordion-toggle" data-toggle="collapse" data-parent="#tasks" data-target="#collapse-<%= @task.cid %>">
+    <input type="checkbox" style="margin-right: 10px; float: left">
+    <%= @task.get('title') %>
+    <i class="icon-pencil" style="margin-left: 10px"></i>
+  </a>
+</div>
+
+<div id="collapse-<%= @task.cid %>" class="accordion-body collapse" style="height: 0px; ">
+  <div class="accordion-inner">
+    <%= @task.get('description') %>
+  </div>
+</div>
