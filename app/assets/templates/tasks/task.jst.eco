@@ -9,6 +9,7 @@
     <% end %>
 
     <i class="icon-pencil" style="margin-left: 10px"></i>
+    <a href="#" class="delete btn btn-mini btn-danger" style="float: right; display: none;"><i class="icon-trash"></i></a>
   </span>
 </div>
 

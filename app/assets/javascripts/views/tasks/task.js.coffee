@@ -6,6 +6,9 @@ class Todorails.Views.Task extends Backbone.View
     'click .done': 'toggleDone'
     'dblclick': 'edit'
     'keyup .title-field': 'keyup'
+    'click .delete': 'delete'
+    'mouseover': 'showDelete'
+    'mouseout': 'hideDelete'
 
   initialize: ->
     @model.bind('change', @render)
@@ -46,3 +49,14 @@ class Todorails.Views.Task extends Backbone.View
 
     # Don't bubble keyup event upwards.
     event.stopPropagation()
+
+  delete: (event) ->
+    event.preventDefault()
+    @model.destroy()
+    @remove()
+
+  showDelete: ->
+    this.$('.delete').show()
+
+  hideDelete: ->
+    this.$('.delete').hide()
