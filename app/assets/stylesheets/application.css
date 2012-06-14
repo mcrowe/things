@@ -11,3 +11,15 @@
  *= require_self
  *= require_tree .
 */
+
+.task-placeholder {
+  height: 37px;
+  margin-bottom: 3px;
+  border-radius: 3px;
+  border: 1px solid #66bbdd;
+  background-color: #e0edfb;
+}
+
+.accordion-toggle {
+  background-color: white;
+}

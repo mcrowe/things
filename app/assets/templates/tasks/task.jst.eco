@@ -1,4 +1,4 @@
-<div class="accordion-heading">
+<div class="accordion-heading task" data-task-id="<%= @task.get('id') %>">
   <span class="accordion-toggle">
     <input class="done" type="checkbox" style="margin-right: 10px; float: left" <%= 'checked="checked"' if @task.get('done') %>>
 

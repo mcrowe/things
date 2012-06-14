@@ -9,6 +9,7 @@ class Todorails.Views.Task extends Backbone.View
     'click .delete': 'delete'
     'mouseover': 'showDelete'
     'mouseout': 'hideDelete'
+    'mousedown': 'hideDelete'
 
   initialize: ->
     @model.bind('change', @render)

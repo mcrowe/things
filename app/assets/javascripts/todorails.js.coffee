@@ -17,3 +17,10 @@ $(document).ready ->
     if event.keyCode == 78
       Todorails.tasks.create()
 
+  $('#tasks').sortable
+    placeholder: 'task-placeholder'
+    update: (event, ui) ->
+      # console.log(event, ui)
+      Todorails.tasks.updateOrder()
+      # debugger
+      # Todorails.tasks
