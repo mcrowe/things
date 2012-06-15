@@ -3,11 +3,12 @@ class Todorails.Collections.Tasks extends Backbone.Collection
   localStorage: new Store("Tasks")
 
   updateOrder: =>
-    self = this
+    taskElements = $('.task')
+    taskCount = taskElements.size()
 
-    $('.task').each (i) ->
-      id = $(this).data('task-id')
-      self.get(id).save(order: i)
+    taskElements.each (i, taskElement) =>
+      cid = $(taskElement).data('task-cid')
+      @getByCid(cid).save(order: i)
 
   comparator: (task) ->
-    task.get('order')
+    -1 * task.get('order')

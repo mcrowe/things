@@ -19,8 +19,5 @@ $(document).ready ->
 
   $('#tasks').sortable
     placeholder: 'task-placeholder'
-    update: (event, ui) ->
-      # console.log(event, ui)
+    update: ->
       Todorails.tasks.updateOrder()
-      # debugger
-      # Todorails.tasks

@@ -4,7 +4,7 @@ class Todorails.Views.TasksIndex extends Backbone.View
 
   initialize: ->
     @collection.bind('reset', @render)
-    @collection.bind('add', @appendTask)
+    @collection.bind('add', @prependTask)
 
   render: =>
     $(@el).html(@template())
@@ -13,4 +13,8 @@ class Todorails.Views.TasksIndex extends Backbone.View
 
   appendTask: (task) =>
     view = new Todorails.Views.Task(model: task)
-    @$('#tasks').append(view.render().el)
+    @$('#tasks').prepend(view.render().el)
+
+  prependTask: (task) =>
+    view = new Todorails.Views.Task(model: task)
+    @$('#tasks').prepend(view.render().el)

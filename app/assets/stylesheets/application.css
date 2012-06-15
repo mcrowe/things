@@ -23,3 +23,17 @@
 .accordion-toggle {
   background-color: white;
 }
+
+.task.done-task .accordion-toggle{
+  background-color: #eee;
+  color: #888;
+}
+
+.task .delete {
+  visibility: hidden;
+  float: right;
+}
+
+.task:hover .delete {
+  visibility: visible;
+}

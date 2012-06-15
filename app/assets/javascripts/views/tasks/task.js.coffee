@@ -7,13 +7,9 @@ class Todorails.Views.Task extends Backbone.View
     'dblclick': 'edit'
     'keyup .title-field': 'keyup'
     'click .delete': 'delete'
-    'mouseover': 'showDelete'
-    'mouseout': 'hideDelete'
-    'mousedown': 'hideDelete'
 
   initialize: ->
     @model.bind('change', @render)
-
     @isEditing = @model.get('title').length == 0
 
   render: =>
@@ -55,9 +51,3 @@ class Todorails.Views.Task extends Backbone.View
     event.preventDefault()
     @model.destroy()
     @remove()
-
-  showDelete: ->
-    this.$('.delete').show()
-
-  hideDelete: ->
-    this.$('.delete').hide()

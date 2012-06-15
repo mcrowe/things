@@ -1,20 +1,16 @@
-<div class="accordion-heading task" data-task-id="<%= @task.get('id') %>">
+<div class="accordion-heading task <%= 'done-task' if @task.get('done') %>" data-task-cid="<%= @task.cid %>">
   <span class="accordion-toggle">
     <input class="done" type="checkbox" style="margin-right: 10px; float: left" <%= 'checked="checked"' if @task.get('done') %>>
 
-    <% if @isEditing: %>
+    <div class="display">
       <input class="input-xlarge title-field" id="disabledInput" type="text" value="<%= @task.get('title') %>">
-    <% else: %>
+    </div>
+
+    <div class="edit">
       <%= @task.get('title') %>
-    <% end %>
+    </div>
 
     <i class="icon-pencil" style="margin-left: 10px"></i>
-    <a href="#" class="delete btn btn-mini btn-danger" style="float: right; display: none;"><i class="icon-trash"></i></a>
+    <a href="#" class="delete btn btn-mini btn-danger"><i class="icon-trash"></i></a>
   </span>
-</div>
-
-<div class="accordion-body collapse" style="height: 0px;">
-  <div class="accordion-inner">
-    <%= @task.get('description') %>
-  </div>
 </div>
