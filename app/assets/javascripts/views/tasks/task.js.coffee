@@ -1,6 +1,8 @@
 class Todorails.Views.Task extends Backbone.View
   template: JST['tasks/task']
-  className: 'accordion-group'
+  attributes: ->
+    'class': "task accordion-group #{'task-done' if @model.get('done')} editing"
+    'data-task-cid': @model.cid
 
   events:
     'click .done': 'toggleDone'
@@ -10,18 +12,17 @@ class Todorails.Views.Task extends Backbone.View
 
   initialize: ->
     @model.bind('change', @render)
-    @isEditing = @model.get('title').length == 0
+    @isEditing = @model.blankTitle()
 
   render: =>
     $(@el).html(@template(task: @model, isEditing: @isEditing))
-
-    if @isEditing
-      this.$('.title-field').focus()
+    this.$('.title-field').focus() if @isEditing
 
     this
 
   toggleDone: ->
     @model.toggleDone()
+    $(@el).toggleClass('task-done')
 
   edit: ->
     @isEditing = true

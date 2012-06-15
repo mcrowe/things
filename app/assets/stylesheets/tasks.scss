@@ -1,0 +1,60 @@
+.task-placeholder {
+  height: 37px;
+  margin-bottom: 3px;
+  border-radius: 3px;
+  border: 1px solid #66bbdd;
+  background-color: #e0edfb;
+}
+
+.accordion-toggle {
+//  background-color: white;
+}
+
+.task {
+
+  &.task-done .accordion-toggle {
+    background-color: #eee;
+    color: #888;
+  }
+
+  .done {
+    margin-right: 10px;
+    float: left
+  }
+
+  .title-field {
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 90%;
+    outline: none !important;
+    -webkit-appearance: none !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    background-color: transparent;
+
+    &:focus {
+     outline: none !important;
+     -webkit-appearance: none !important;
+     box-shadow: none;
+     -moz-box-shadow: none;
+     -webkit-box-shadow: none;
+    }
+  }
+
+
+  .delete {
+    float: right;
+    visibility: hidden;
+  }
+
+  &:hover .delete {
+    visibility: visible;
+  }
+
+}
+
+.task {
+  background-color: #fff;
+}

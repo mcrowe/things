@@ -11,29 +11,3 @@
  *= require_self
  *= require_tree .
 */
-
-.task-placeholder {
-  height: 37px;
-  margin-bottom: 3px;
-  border-radius: 3px;
-  border: 1px solid #66bbdd;
-  background-color: #e0edfb;
-}
-
-.accordion-toggle {
-  background-color: white;
-}
-
-.task.done-task .accordion-toggle{
-  background-color: #eee;
-  color: #888;
-}
-
-.task .delete {
-  visibility: hidden;
-  float: right;
-}
-
-.task:hover .delete {
-  visibility: visible;
-}

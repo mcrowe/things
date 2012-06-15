@@ -7,8 +7,10 @@ class Todorails.Models.Task extends Backbone.Model
     order: 0
 
   toggleDone: ->
-    console.log('toggle done')
     @save(done: !@get('done'))
 
   clear: ->
     @destroy()
+
+  blankTitle: ->
+    @get('title').length == 0
