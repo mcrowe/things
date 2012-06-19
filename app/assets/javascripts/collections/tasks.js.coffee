@@ -1,6 +1,6 @@
 class Things.Collections.Tasks extends Backbone.Collection
   model: Things.Models.Task
-  url: '/tasks'
+  url: '/api/tasks'
 
   updateOrder: =>
     taskElements = $('.task')
@@ -11,4 +11,4 @@ class Things.Collections.Tasks extends Backbone.Collection
       @getByCid(cid).save(order: i)
 
   comparator: (task) ->
-    -1 * task.get('order')
+    task.get('order')

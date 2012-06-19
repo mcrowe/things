@@ -17,7 +17,9 @@ $(document).ready ->
     if event.keyCode == 78
       Things.tasks.create()
 
-  $('#tasks').sortable
-    placeholder: 'task-placeholder'
-    update: ->
-      Things.tasks.updateOrder()
+  setTimeout ->
+    $('#tasks').sortable
+      placeholder: 'task-placeholder'
+      update: ->
+        Things.tasks.updateOrder()
+  , 1000

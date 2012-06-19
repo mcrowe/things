@@ -1,6 +1,9 @@
 Things::Application.routes.draw do
 
-  root to: 'tasks#index'
+  root to: 'main#index'
 
-  resources :tasks
+  scope 'api' do
+    resources :tasks
+  end
+
 end

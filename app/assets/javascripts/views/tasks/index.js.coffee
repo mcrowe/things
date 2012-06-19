@@ -1,5 +1,4 @@
 class Things.Views.TasksIndex extends Backbone.View
-
   template: JST['tasks/index']
 
   initialize: ->
@@ -13,7 +12,7 @@ class Things.Views.TasksIndex extends Backbone.View
 
   appendTask: (task) =>
     view = new Things.Views.Task(model: task)
-    @$('#tasks').prepend(view.render().el)
+    @$('#tasks').append(view.render().el)
 
   prependTask: (task) =>
     view = new Things.Views.Task(model: task)

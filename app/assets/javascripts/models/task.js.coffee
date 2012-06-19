@@ -6,6 +6,9 @@ class Things.Models.Task extends Backbone.Model
     done: false
     order: 0
 
+  toJSON: ->
+    task: _.clone(@attributes)
+
   toggleDone: ->
     @save(done: !@get('done'))
 
