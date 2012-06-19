@@ -1,4 +1,4 @@
-class Todorails.Views.TasksIndex extends Backbone.View
+class Things.Views.TasksIndex extends Backbone.View
 
   template: JST['tasks/index']
 
@@ -12,9 +12,9 @@ class Todorails.Views.TasksIndex extends Backbone.View
     this
 
   appendTask: (task) =>
-    view = new Todorails.Views.Task(model: task)
+    view = new Things.Views.Task(model: task)
     @$('#tasks').prepend(view.render().el)
 
   prependTask: (task) =>
-    view = new Todorails.Views.Task(model: task)
+    view = new Things.Views.Task(model: task)
     @$('#tasks').prepend(view.render().el)

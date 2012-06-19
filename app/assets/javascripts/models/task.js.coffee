@@ -1,4 +1,4 @@
-class Todorails.Models.Task extends Backbone.Model
+class Things.Models.Task extends Backbone.Model
 
   defaults:
     title: ''

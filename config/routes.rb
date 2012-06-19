@@ -1,4 +1,4 @@
-Todorails::Application.routes.draw do
+Things::Application.routes.draw do
 
   root to: 'tasks#index'
 

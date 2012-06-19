@@ -1,4 +1,4 @@
-class Todorails.Routers.Tasks extends Backbone.Router
+class Things.Routers.Tasks extends Backbone.Router
 
   routes:
     '': 'index'
@@ -6,5 +6,5 @@ class Todorails.Routers.Tasks extends Backbone.Router
   initialize: ->
 
   index: ->
-    view = new Todorails.Views.TasksIndex(collection: Todorails.tasks)
+    view = new Things.Views.TasksIndex(collection: Things.tasks)
     $('#tasks-list').html(view.render().el)

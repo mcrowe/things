@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Todorails::Application.load_tasks
+Things::Application.load_tasks

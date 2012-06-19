@@ -1,4 +1,4 @@
-class Todorails.Views.Task extends Backbone.View
+class Things.Views.Task extends Backbone.View
   template: JST['tasks/task']
   attributes: ->
     'class': "task accordion-group #{'task-done' if @model.get('done')} editing"

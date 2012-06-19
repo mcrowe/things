@@ -16,7 +16,7 @@
 //= require underscore
 //= require backbone
 //
-//= require todorails
+//= require things
 //
 //= require_tree ../templates/
 //= require_tree ./models

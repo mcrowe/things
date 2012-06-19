@@ -1,5 +1,5 @@
-class Todorails.Collections.Tasks extends Backbone.Collection
-  model: Todorails.Models.Task
+class Things.Collections.Tasks extends Backbone.Collection
+  model: Things.Models.Task
   url: '/tasks'
 
   updateOrder: =>
