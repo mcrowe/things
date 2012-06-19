@@ -15,7 +15,6 @@
 //= require twitter/bootstrap
 //= require underscore
 //= require backbone
-//= require backbone-localstorage
 //
 //= require todorails
 //
